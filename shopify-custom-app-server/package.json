@@ -1,0 +1,10 @@
+{
+	"type": "module",
+	"scripts": {
+		"server": "node ./server.js"
+	},
+	"dependencies": {
+		"@shopify/shopify-app-express": "latest",
+		"express": "latest"
+	}
+}

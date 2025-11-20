@@ -1,0 +1,20 @@
+name = "CustomAppServer"
+handle = "custom-app-server"
+application_url = "http://localhost.8080"
+embedded = false
+
+[webhooks]
+api_version = "2025-07"
+
+  [[webhooks.subscriptions]]
+  uri = "/api/webhooks"
+  compliance_topics = [ "customers/data_request", "customers/redact", "shop/redact" ]
+
+[access_scopes]
+scopes = "your_scopes" # <-- Replace with your required scopes
+use_legacy_install_flow = true
+
+[auth]
+redirect_urls = [
+  "http://localhost:8080/api/auth/callback"
+]
